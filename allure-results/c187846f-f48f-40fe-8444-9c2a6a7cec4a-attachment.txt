@@ -1,0 +1,71 @@
+ERROR    asyncio:base_events.py:1871 Exception in callback SyncBase._sync.<locals>.<lambda>() at C:\Users\aravind.asokan\PycharmProjects\PythonProject18\.venv\Lib\site-packages\playwright\_impl\_sync_base.py:111
+handle: <Handle SyncBase._sync.<locals>.<lambda>() at C:\Users\aravind.asokan\PycharmProjects\PythonProject18\.venv\Lib\site-packages\playwright\_impl\_sync_base.py:111>
+Traceback (most recent call last):
+  File "C:\Users\aravind.asokan\AppData\Local\Programs\Python\Python313\Lib\asyncio\events.py", line 89, in _run
+    self._context.run(self._callback, *self._args)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aravind.asokan\PycharmProjects\PythonProject18\.venv\Lib\site-packages\playwright\_impl\_sync_base.py", line 111, in <lambda>
+    task.add_done_callback(lambda _: g_self.switch())
+                                     ~~~~~~~~~~~~~^^
+  File "C:\Users\aravind.asokan\PycharmProjects\PythonProject18\.venv\Lib\site-packages\playwright\_impl\_connection.py", line 471, in _listener_with_error_handler_attached
+    potential_future = listener(params)
+  File "C:\Users\aravind.asokan\PycharmProjects\PythonProject18\.venv\Lib\site-packages\playwright\_impl\_page.py", line 193, in <lambda>
+    self._channel.on("download", lambda params: self._on_download(params))
+                                                ~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\aravind.asokan\PycharmProjects\PythonProject18\.venv\Lib\site-packages\playwright\_impl\_page.py", line 359, in _on_download
+    self.emit(
+    ~~~~~~~~~^
+        Page.Events.Download, Download(self, url, suggested_filename, artifact)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\aravind.asokan\PycharmProjects\PythonProject18\.venv\Lib\site-packages\pyee\asyncio.py", line 70, in emit
+    return super().emit(event, *args, **kwargs)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aravind.asokan\PycharmProjects\PythonProject18\.venv\Lib\site-packages\pyee\base.py", line 220, in emit
+    handled = self._call_handlers(event, args, kwargs)
+  File "C:\Users\aravind.asokan\PycharmProjects\PythonProject18\.venv\Lib\site-packages\pyee\base.py", line 196, in _call_handlers
+    self._emit_run(f, args, kwargs)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\aravind.asokan\PycharmProjects\PythonProject18\.venv\Lib\site-packages\pyee\asyncio.py", line 81, in _emit_run
+    self.emit("error", exc)
+    ~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\aravind.asokan\PycharmProjects\PythonProject18\.venv\Lib\site-packages\pyee\asyncio.py", line 70, in emit
+    return super().emit(event, *args, **kwargs)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aravind.asokan\PycharmProjects\PythonProject18\.venv\Lib\site-packages\pyee\base.py", line 223, in emit
+    self._emit_handle_potential_error(event, args[0] if args else None)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aravind.asokan\PycharmProjects\PythonProject18\.venv\Lib\site-packages\pyee\base.py", line 181, in _emit_handle_potential_error
+    raise error
+  File "C:\Users\aravind.asokan\PycharmProjects\PythonProject18\.venv\Lib\site-packages\pyee\asyncio.py", line 79, in _emit_run
+    coro: Any = f(*args, **kwargs)
+                ~^^^^^^^^^^^^^^^^^
+  File "C:\Users\aravind.asokan\PycharmProjects\PythonProject18\.venv\Lib\site-packages\playwright\_impl\_impl_to_api_mapping.py", line 123, in wrapper_func
+    return handler(
+        *list(map(lambda a: self.from_maybe_impl(a), args))[:arg_count]
+    )
+  File "C:\Users\aravind.asokan\PycharmProjects\PythonProject18\practicesession\test_downloadsfiles.py", line 8, in <lambda>
+    page.on("download",lambda download:download.save_as("downloads/testfile.txt"))
+                                       ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aravind.asokan\PycharmProjects\PythonProject18\.venv\Lib\site-packages\playwright\sync_api\_generated.py", line 7338, in save_as
+    return mapping.from_maybe_impl(self._sync(self._impl_obj.save_as(path=path)))
+                                   ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aravind.asokan\PycharmProjects\PythonProject18\.venv\Lib\site-packages\playwright\_impl\_sync_base.py", line 115, in _sync
+    return task.result()
+           ~~~~~~~~~~~^^
+  File "C:\Users\aravind.asokan\PycharmProjects\PythonProject18\.venv\Lib\site-packages\playwright\_impl\_download.py", line 61, in save_as
+    await self._artifact.save_as(path)
+  File "C:\Users\aravind.asokan\PycharmProjects\PythonProject18\.venv\Lib\site-packages\playwright\_impl\_artifact.py", line 46, in save_as
+    await self._channel.send(
+    ...<2 lines>...
+    )
+  File "C:\Users\aravind.asokan\PycharmProjects\PythonProject18\.venv\Lib\site-packages\playwright\_impl\_connection.py", line 69, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\aravind.asokan\PycharmProjects\PythonProject18\.venv\Lib\site-packages\playwright\_impl\_connection.py", line 558, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.Error: Download.save_as: canceled

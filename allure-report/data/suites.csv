@@ -1,0 +1,8 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","1","test_testcase1","pytestexamples","2025-11-06","passed","2025-11-06","","test_pytestexample1","",""
+"","2","test_testcase4","pytestexamples","2025-11-06","passed","2025-11-06","","test_pytestexample2","",""
+"","1","test_testcase5","pytestexamples","2025-11-06","passed","2025-11-06","","test_pytestexample3","",""
+"","3","test_testcase3","pytestexamples","2025-11-06","passed","2025-11-06","","test_pytestexample2","",""
+"","1","test_testcase44","pytestexamples","2025-11-06","passed","2025-11-06","","test_pytestexample1","",""
+"","4532","test_open1[chromium]","playwrightexamples","2025-11-06","passed","2025-11-06","","test_example1","",""
+"","6","test_testcase3","pytestexamples","2025-11-06","passed","2025-11-06","","test_pytestexample1","",""
