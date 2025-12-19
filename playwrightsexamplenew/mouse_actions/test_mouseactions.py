@@ -40,7 +40,7 @@ def test_mouse_draganddrop(page:Page):
     page.goto("https://testautomationpractice.blogspot.com/")
 
     source=page.locator("#draggable")
-    target=page.locator("droppable")
+    target=page.locator("#droppable")
 
     #Appraoch1 : manual drag using hover()
     # source.hover()
