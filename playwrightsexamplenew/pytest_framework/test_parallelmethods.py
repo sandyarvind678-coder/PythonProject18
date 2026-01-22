@@ -21,7 +21,7 @@ def test_four():
 
 
 '''
-To run he tests parallely:
+To run the tests parallely:
 
     pytest day17/test_parallel.py -v -s -n=2 
     pytest day17/test_parallel.py -v -s -n 2 

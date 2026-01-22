@@ -6,7 +6,7 @@ def test_inputbox(page: Page):
     page.goto("https://testautomationpractice.blogspot.com/")
     text_box=page.locator("#name")
 
-    # visibility of teh element and enable or not
+    # visibility of the element and enable or not
     expect(text_box).to_be_visible()
     expect(text_box).to_be_enabled()
 

@@ -79,7 +79,7 @@
 # Reversing list items
 # pre-requisite: values must be in sorted order
 #
-# mylist = ['apple', 'banana', 'cherry', 'mango']  # asceding order
+# mylist = ['apple', 'banana', 'cherry', 'mango']  # ascending order
 # print("original values:", mylist)
 # mylist.reverse()
 # print("reversed values in a list:", mylist)  # ['mango', 'cherry', 'banana', 'apple']

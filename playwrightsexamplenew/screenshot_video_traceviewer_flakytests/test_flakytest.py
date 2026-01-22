@@ -1,3 +1,6 @@
+#A flaky test in pytest is a test that sometimes passes and sometimes fails without any code change.
+#This inconsistency makes test results unreliable and reduces confidence in automation.
+
 from playwright.sync_api import Page, expect
 
 def test_Login(page: Page):
