@@ -13,4 +13,4 @@ middle_value = arr1[len(arr1) // 2]
 arr2 = [middle_value]
 
 print("First Array (Auto Generated):", arr1)
-print("Second Array Output:", arr2[0])
+print("Second Array Output:", arr2)

@@ -7,6 +7,7 @@ def test_verify_playwright_locators(page: Page):
     page.goto("https://testautomationpractice.blogspot.com/p/playwrightpractice.html")
 
     # 1. get_by_alt_text() - locate image by alt attribute
+
     logo = page.get_by_alt_text("logo image")
     expect(logo).to_be_visible()
 
